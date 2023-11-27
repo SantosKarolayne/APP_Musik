@@ -15,6 +15,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val fazerCadastro: AppCompatButton = findViewById(R.id.botacadastro)
+
+        fazerCadastro.setOnClickListener{
+            val intent = Intent(this,Cadastrar::class.java)
+            startActivity(intent)
+        }
+
         val entrar: AppCompatButton = findViewById(R.id.botaoentrarlogin)
 
         entrar.setOnClickListener{
