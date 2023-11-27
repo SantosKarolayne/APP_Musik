@@ -24,6 +24,18 @@ class Publicar : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_publicar)
 
+        val publicar: AppCompatButton = findViewById(R.id.buttonPostar)
+
+
+        publicar.setOnClickListener{
+            val intent = Intent(this,Feed::class.java)
+            startActivity(intent)
+        }
+
+
+
+
+
 
 
 
@@ -47,6 +59,9 @@ class Publicar : AppCompatActivity() {
 
 
     }
+
+
+
 
 
 }
