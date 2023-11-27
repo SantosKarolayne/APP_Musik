@@ -1,6 +1,7 @@
 package com.example.aplicativomusik
 
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
@@ -31,6 +32,8 @@ class ConteudoRepositorio : AppCompatActivity() {
                 // Exibe a imagem
                 imagemComposicao.setImageResource(R.drawable.musicaum)
             }
+        } else {
+            // Adicione um tratamento para o caso em que parametro é null
         }
 
         val mensagembtn: AppCompatButton = findViewById(R.id.btnmensagens)
@@ -39,13 +42,19 @@ class ConteudoRepositorio : AppCompatActivity() {
             imagemComposicao.visibility = ImageView.GONE
             videoView.visibility = VideoView.VISIBLE
 
-
-            val videoPath = "android.resource://" + packageName + "/" + R.raw.nome_do_seu_video
+            val videoPath = "android.resource://" + packageName + "/" + R.raw.acertei
             val uri = Uri.parse(videoPath)
 
             videoView.setVideoURI(uri)
             videoView.start()
         }
+
+
+        val mensagens: AppCompatButton = findViewById(R.id.btnenviarmen)
+
+        mensagens.setOnClickListener{
+            val intent = Intent(this,EnviarMensagens::class.java)
+            startActivity(intent)
+        }
     }
 }
-
