@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,46 +9,54 @@
 
     <TextView
         android:id="@+id/txPost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="Compartilhe"
+        android:textColor="@color/Azul"
+        android:gravity="center"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:textColor="@color/red"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtPost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:hint="Post"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"/>
+        android:textColorHint="@color/Escuro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txPost" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:background="@drawable/background_button"
-        android:textColor="@color/white"
         android:id="@+id/buttonSelecionarVideo"
-        android:layout_marginLeft="280dp"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Selecionar Vídeo" />
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/background_button"
+        android:text="Selecionar Vídeo"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <VideoView
         android:id="@+id/videoView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/edtPost"
+        tools:layout_editor_absoluteX="113dp" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:background="@drawable/background_button"
-        android:textColor="@color/white"
-        android:id="@+id/bntPosta"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="280dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Selecionar Vídeo" />
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

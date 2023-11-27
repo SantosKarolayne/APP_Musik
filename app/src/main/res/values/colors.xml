@@ -2,5 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="red">#FF0000</color>
+    <color name="Azul">#113946</color>
+    <color name="Escuro">#BCA37F</color>
+    <color name="Medio">#EAD7BB</color>
+    <color name="Claro">#FFF2D8</color>
+
 </resources>
