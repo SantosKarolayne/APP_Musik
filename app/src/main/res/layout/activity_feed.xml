@@ -14,7 +14,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnPost"
-        android:text="Publicar"
+        android:text="Publicarr"
         android:layout_marginLeft="300dp"
         android:textColor="@color/white"
         android:background="@drawable/background_button"
