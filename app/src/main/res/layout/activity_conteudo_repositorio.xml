@@ -12,6 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"/>
 
+    <VideoView
+        android:id="@+id/videoComposicao"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:background="@drawable/background_button"

@@ -28,7 +28,7 @@ class Publicar : AppCompatActivity() {
 
 
         publicar.setOnClickListener{
-            val intent = Intent(this,Feed::class.java)
+            val intent = Intent(this,ConteudoRepositorio::class.java)
             startActivity(intent)
         }
 
