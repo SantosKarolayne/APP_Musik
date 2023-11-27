@@ -1,6 +1,6 @@
 package com.example.aplicativomusik
 
-import Mensagens
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,19 +15,18 @@ class Repositorio : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_repositorio)
 
-        lvMinhasComposicoes = findViewById(R.id.listaRepositorio )
-        val arrayComposicoes = arrayOf("amor", "odio")
-        val adapterComposicoes = ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayComposicoes)
+        lvMinhasComposicoes = findViewById(R.id.listaRepositorio)
+
+
+        val arrayComposicoes = resources.getStringArray(R.array.array_composicoes)
+
+        val adapterComposicoes = ArrayAdapter(this, android.R.layout.simple_list_item_1, arrayComposicoes)
         lvMinhasComposicoes.adapter = adapterComposicoes
 
-
-        lvMinhasComposicoes.setOnItemClickListener{
-                parent, view, position , id ->
-
-            val intent = Intent(this,ConteudoRepositorio::class.java)
-            intent.putExtra("nomeRepositorio",arrayComposicoes[position])
+        lvMinhasComposicoes.setOnItemClickListener { parent, view, position, id ->
+            val intent = Intent(this, ConteudoRepositorio::class.java)
+            intent.putExtra("nomeRepositorio", arrayComposicoes[position])
             startActivity(intent)
-
         }
 
 

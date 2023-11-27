@@ -13,10 +13,10 @@
         android:theme="@style/Theme.AplicativoMusik"
         tools:targetApi="31">
         <activity
-            android:name=".Publicar"
+            android:name=".EnviarMensagens"
             android:exported="false" />
         <activity
-            android:name=".Mensagens"
+            android:name=".Publicar"
             android:exported="false" />
         <activity
             android:name=".Feed"
